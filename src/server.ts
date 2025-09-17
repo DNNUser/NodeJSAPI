@@ -1,9 +1,10 @@
+import 'dotenv/config';
 import app from './app';
- 
- 
 
-const server = app.listen(3015, () => {
-  console.log(`Server running on port  2015`);
-});
+const port = process.env.PORT || 3015;
+
+   const server = app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+}) ;
 
 export default server;
